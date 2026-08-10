@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "I.C.E.C.O. — Instituto Cultural e Esportivo de Cidade Ocidental" },
+      { name: "description", content: "Portal oficial do I.C.E.C.O. em Cidade Ocidental. Promovendo cultura, esporte, arte e inclusão social na região do Entorno." },
+      { name: "author", content: "I.C.E.C.O." },
+      { property: "og:title", content: "I.C.E.C.O. — Instituto Cultural e Esportivo de Cidade Ocidental" },
+      { property: "og:description", content: "Promovendo cultura, esporte, arte e inclusão social na região do Entorno." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@icecoocidental" },
     ],
     links: [
       {
