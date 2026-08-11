@@ -105,28 +105,30 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t bg-background p-4 animate-in slide-in-from-top duration-300">
-          <div className="flex flex-col space-y-4">
+        <div className="lg:hidden border-t bg-background h-[calc(100vh-5rem)] overflow-y-auto p-6 animate-in slide-in-from-top duration-300">
+          <div className="flex flex-col space-y-6 pb-12">
             {menuItems.map((item) => (
-              <div key={item.label}>
+              <div key={item.label} className="border-b border-border/50 pb-4">
                 {item.children ? (
-                  <div className="flex flex-col space-y-2">
-                    <span className="font-semibold text-primary">{item.label}</span>
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.to}
-                        className="pl-4 text-sm hover:text-primary"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="flex flex-col space-y-3">
+                    <span className="font-black text-lg text-primary uppercase tracking-tight">{item.label}</span>
+                    <div className="grid grid-cols-1 gap-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.to}
+                          className="pl-4 text-sm font-medium hover:text-primary py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 ) : (
                   <Link
                     to={item.to}
-                    className="text-sm font-medium hover:text-primary"
+                    className="text-lg font-black uppercase tracking-tight hover:text-primary"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -136,7 +138,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/contato"
-              className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90"
+              className="inline-flex items-center justify-center rounded-xl bg-secondary px-6 py-4 text-lg font-black text-secondary-foreground shadow-lg transition-colors hover:bg-secondary/90"
               onClick={() => setIsOpen(false)}
             >
               Quero fazer parte
