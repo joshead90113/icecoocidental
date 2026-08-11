@@ -29,27 +29,27 @@ function Index() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full overflow-hidden flex items-center">
+      <section className="relative min-h-[70vh] md:h-[80vh] w-full overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10" />
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center animate-in fade-in duration-1000" />
         
-        <div className="container relative z-20 px-4 text-white max-w-4xl">
-          <div className="space-y-6 animate-in slide-in-from-left duration-700">
-            <span className="inline-block bg-secondary text-secondary-foreground px-3 py-1 text-sm font-bold uppercase tracking-wider rounded">
+        <div className="container relative z-20 px-4 text-white max-w-4xl py-12">
+          <div className="space-y-4 md:space-y-6 animate-in slide-in-from-left duration-700">
+            <span className="inline-block bg-secondary text-secondary-foreground px-3 py-1 text-xs md:text-sm font-bold uppercase tracking-wider rounded">
               Cidade Ocidental - GO
             </span>
-            <h1 className="text-5xl md:text-7xl font-black leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-7xl font-black leading-tight drop-shadow-lg">
               Cultura e esporte <br/>
               <span className="text-secondary">transformando</span> vidas
             </h1>
-            <p className="text-xl md:text-2xl font-medium max-w-2xl opacity-90 leading-relaxed">
+            <p className="text-lg md:text-2xl font-medium max-w-2xl opacity-90 leading-relaxed">
               O I.C.E.C.O. promove cultura, esporte, arte e inclusão social conectando talentos e oportunidades na região do Entorno.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button className="w-full sm:w-auto bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
                 Quero fazer parte
               </button>
-              <button className="bg-white/10 backdrop-blur-md border-2 border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+              <button className="w-full sm:w-auto bg-white/10 backdrop-blur-md border-2 border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
                 Conheça o I.C.E.C.O.
               </button>
             </div>
@@ -90,7 +90,7 @@ function Index() {
             </div>
             
             <div className="lg:col-span-5 relative">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 rotate-3 transition-transform hover:rotate-0 duration-500">
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 rotate-3 md:rotate-3 transition-transform hover:rotate-0 duration-500 max-w-sm mx-auto lg:max-w-none">
                 <img src={logo10Anos.url} alt="Logo 10 Anos I.C.E.C.O." className="w-full h-auto" />
               </div>
               {/* Geometric elements inspired by logo */}
