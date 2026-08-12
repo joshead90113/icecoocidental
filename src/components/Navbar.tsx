@@ -11,39 +11,39 @@ const Navbar = () => {
     {
       label: "O I.C.E.C.O.",
       children: [
-        { label: "Quem somos", to: "/sobre" },
+        { label: "Quem somos", to: "/" as any },
         { label: "Diretoria", to: "/diretoria" },
-        { label: "10 Anos de História", to: "/historia" },
+        { label: "10 Anos de História", to: "/" as any },
       ],
     },
     {
       label: "Cultura",
-      to: "/cultura",
+      to: "/" as any,
       children: [
-        { label: "Música", to: "/cultura/musica" },
-        { label: "Bandas e Fanfarras", to: "/cultura/bandas" },
-        { label: "Artistas", to: "/cultura/artistas" },
-        { label: "Teatro", to: "/cultura/teatro" },
+        { label: "Música", to: "/" as any },
+        { label: "Bandas e Fanfarras", to: "/" as any },
+        { label: "Artistas", to: "/" as any },
+        { label: "Teatro", to: "/" as any },
       ],
     },
     {
       label: "Esporte",
-      to: "/esporte",
+      to: "/" as any,
       children: [
-        { label: "Vôlei", to: "/esporte/volei" },
-        { label: "Handebol", to: "/esporte/handebol" },
-        { label: "Futsal", to: "/esporte/futsal" },
-        { label: "Futebol de 7", to: "/esporte/futebol-7" },
-        { label: "Futebol de Campo", to: "/esporte/futebol-campo" },
-        { label: "Vôlei de Praia", to: "/esporte/volei-praia" },
-        { label: "Basquetebol", to: "/esporte/basquetebol" },
-        { label: "Filiados", to: "/esporte/filiados" },
+        { label: "Vôlei", to: "/" as any },
+        { label: "Handebol", to: "/" as any },
+        { label: "Futsal", to: "/" as any },
+        { label: "Futebol de 7", to: "/" as any },
+        { label: "Futebol de Campo", to: "/" as any },
+        { label: "Vôlei de Praia", to: "/" as any },
+        { label: "Basquetebol", to: "/" as any },
+        { label: "Filiados", to: "/" as any },
       ],
     },
-    { label: "Projetos", to: "/projetos" },
-    { label: "Notícias", to: "/noticias" },
-    { label: "Galeria", to: "/galeria" },
-    { label: "Contato", to: "/contato" },
+    { label: "Projetos", to: "/" as any },
+    { label: "Notícias", to: "/" as any },
+    { label: "Galeria", to: "/" as any },
+    { label: "Contato", to: "/" as any },
   ];
 
   return (
@@ -86,7 +86,7 @@ const Navbar = () => {
             </div>
           ))}
           <Link
-            to="/contato"
+            to={"/" as any}
             className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             Quero fazer parte
@@ -137,7 +137,7 @@ const Navbar = () => {
               </div>
             ))}
             <Link
-              to="/contato"
+              to={"/" as any}
               className="inline-flex items-center justify-center rounded-xl bg-secondary px-6 py-4 text-lg font-black text-secondary-foreground shadow-lg transition-colors hover:bg-secondary/90"
               onClick={() => setIsOpen(false)}
             >

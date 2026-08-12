@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import logo10Anos from "@/assets/logo-10-anos.jpg.asset.json";
 import culturaBandaAsset from "@/assets/cultura-banda.jpg.asset.json";
 import diretoriaAsset from "@/assets/diretoria.jpg.asset.json";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -30,8 +31,17 @@ function Index() {
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] md:h-[80vh] w-full overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center animate-in fade-in duration-1000" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/30 z-10" />
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-1000"
+        >
+          <source src={heroVideoAsset.url} type="video/mp4" />
+          Seu navegador não suporta vídeos.
+        </video>
         
         <div className="container relative z-20 px-4 text-white max-w-4xl py-12">
           <div className="space-y-4 md:space-y-6 animate-in slide-in-from-left duration-700">
