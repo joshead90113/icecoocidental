@@ -10,17 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ContatureRouteImport } from './routes/contature'
 import { Route as DiretoriaRouteImport } from './routes/diretoria'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatureRoute = ContatureRouteImport.update({
-  id: '/contature',
-  path: '/contature',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DiretoriaRoute = DiretoriaRouteImport.update({
@@ -31,31 +25,27 @@ const DiretoriaRoute = DiretoriaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/contature': typeof ContatureRoute
   '/diretoria': typeof DiretoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/contature': typeof ContatureRoute
   '/diretoria': typeof DiretoriaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/contature': typeof ContatureRoute
   '/diretoria': typeof DiretoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contature' | '/diretoria'
+  fullPaths: '/' | '/diretoria'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contature' | '/diretoria'
-  id: '__root__' | '/' | '/contature' | '/diretoria'
+  to: '/' | '/diretoria'
+  id: '__root__' | '/' | '/diretoria'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ContatureRoute: typeof ContatureRoute
   DiretoriaRoute: typeof DiretoriaRoute
 }
 
@@ -66,13 +56,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contature': {
-      id: '/contature'
-      path: '/contature'
-      fullPath: '/contature'
-      preLoaderRoute: typeof ContatureRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/diretoria': {
@@ -87,7 +70,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ContatureRoute: ContatureRoute,
   DiretoriaRoute: DiretoriaRoute,
 }
 export const routeTree = rootRouteImport
