@@ -207,6 +207,51 @@ export type Database = {
           },
         ]
       }
+      raffles: {
+        Row: {
+          beneficiary_info: string | null
+          created_at: string | null
+          description: string | null
+          draw_date: string
+          id: string
+          image_url: string | null
+          pix_key: string | null
+          pix_qr_code_url: string | null
+          prize: string
+          status: string
+          ticket_price: number
+          title: string
+        }
+        Insert: {
+          beneficiary_info?: string | null
+          created_at?: string | null
+          description?: string | null
+          draw_date: string
+          id?: string
+          image_url?: string | null
+          pix_key?: string | null
+          pix_qr_code_url?: string | null
+          prize: string
+          status?: string
+          ticket_price: number
+          title: string
+        }
+        Update: {
+          beneficiary_info?: string | null
+          created_at?: string | null
+          description?: string | null
+          draw_date?: string
+          id?: string
+          image_url?: string | null
+          pix_key?: string | null
+          pix_qr_code_url?: string | null
+          prize?: string
+          status?: string
+          ticket_price?: number
+          title?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
