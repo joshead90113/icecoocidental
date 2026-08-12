@@ -30,7 +30,7 @@ function Index() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] md:h-[80vh] w-full overflow-hidden flex items-center">
+      <section className="relative h-screen md:h-[80vh] w-full overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/30 z-10" />
         <video 
           autoPlay 
