@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
 import logo10Anos from "@/assets/logo-10-anos.jpg.asset.json";
 import culturaBandaAsset from "@/assets/cultura-nova.jpg.asset.json";
+import esporteGinasioAsset from "@/assets/esporte-ginasio.jpg.asset.json";
 import diretoriaAsset from "@/assets/diretoria.jpg.asset.json";
 import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import { useQuery } from "@tanstack/react-query";
