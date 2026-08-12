@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, User } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { JoinUsModal } from "./JoinUsModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,12 +87,13 @@ const Navbar = () => {
               )}
             </div>
           ))}
-          <Link
-            to={"/" as any}
-            className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          >
-            Quero fazer parte
-          </Link>
+          <JoinUsModal trigger={
+            <button
+              className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            >
+              Quero fazer parte
+            </button>
+          } />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -137,13 +139,14 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link
-              to={"/" as any}
-              className="inline-flex items-center justify-center rounded-xl bg-secondary px-6 py-4 text-lg font-black text-secondary-foreground shadow-lg transition-colors hover:bg-secondary/90"
-              onClick={() => setIsOpen(false)}
-            >
-              Quero fazer parte
-            </Link>
+            <JoinUsModal trigger={
+              <button
+                className="inline-flex items-center justify-center rounded-xl bg-secondary px-6 py-4 text-lg font-black text-secondary-foreground shadow-lg transition-colors hover:bg-secondary/90"
+                onClick={() => setIsOpen(false)}
+              >
+                Quero fazer parte
+              </button>
+            } />
           </div>
         </div>
       )}

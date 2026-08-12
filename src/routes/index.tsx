@@ -9,6 +9,7 @@ import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { JoinUsModal } from "@/components/JoinUsModal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -58,9 +59,11 @@ function Index() {
               O I.C.E.C.O. promove cultura, esporte, arte e inclusão social conectando talentos e oportunidades na região do Entorno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="w-full sm:w-auto bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-                Quero fazer parte
-              </button>
+              <JoinUsModal trigger={
+                <button className="w-full sm:w-auto bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                  Quero fazer parte
+                </button>
+              } />
               <button className="w-full sm:w-auto bg-white/10 backdrop-blur-md border-2 border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
                 Conheça o I.C.E.C.O.
               </button>
