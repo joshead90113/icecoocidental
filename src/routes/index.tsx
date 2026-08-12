@@ -251,7 +251,16 @@ function Index() {
                 Instituto dedicado ao fortalecimento da cultura, do esporte e das iniciativas sociais conectando talentos e oportunidades.
               </p>
               <div className="flex gap-4">
-                {['Instagram', 'Facebook', 'YouTube', 'WhatsApp'].map(social => (
+                <a 
+                  href="https://www.instagram.com/icecoocidental?igsh=cXNqZ3c3anVvamRz&igsi=cXNqZ3c3anVvamRz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-[10px] font-black text-white"
+                  title="Instagram"
+                >
+                  I
+                </a>
+                {['Facebook', 'YouTube', 'WhatsApp'].map(social => (
                   <div key={social} className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-[10px] font-black">{social[0]}</div>
                 ))}
               </div>
