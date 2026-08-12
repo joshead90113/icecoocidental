@@ -28,7 +28,7 @@ const Navbar = () => {
     },
     {
       label: "Esporte",
-      to: "/" as any,
+      to: "/esporte",
       children: [
         { label: "Vôlei", to: "/" as any },
         { label: "Handebol", to: "/" as any },

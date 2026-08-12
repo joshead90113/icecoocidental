@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
 import logo10Anos from "@/assets/logo-10-anos.jpg.asset.json";
 import culturaBandaAsset from "@/assets/cultura-nova.jpg.asset.json";
@@ -171,9 +172,12 @@ function Index() {
                     <span key={t} className="text-xs font-bold bg-muted px-2 py-1 rounded">{t}</span>
                   ))}
                 </div>
-                <button className="w-full py-4 rounded-xl bg-secondary text-secondary-foreground font-bold hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20">
+                <Link 
+                  to="/esporte"
+                  className="w-full py-4 rounded-xl bg-secondary text-secondary-foreground font-bold hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20 block text-center"
+                >
                   Explorar Esporte
-                </button>
+                </Link>
               </div>
             </div>
           </div>

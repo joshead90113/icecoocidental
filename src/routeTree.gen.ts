@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DiretoriaRouteImport } from './routes/diretoria'
+import { Route as EsporteRouteImport } from './routes/esporte'
 import { Route as EventosRouteImport } from './routes/eventos'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const DiretoriaRoute = DiretoriaRouteImport.update({
   path: '/diretoria',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsporteRoute = EsporteRouteImport.update({
+  id: '/esporte',
+  path: '/esporte',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EventosRoute = EventosRouteImport.update({
   id: '/eventos',
   path: '/eventos',
@@ -32,30 +38,34 @@ const EventosRoute = EventosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/diretoria': typeof DiretoriaRoute
+  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/diretoria': typeof DiretoriaRoute
+  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/diretoria': typeof DiretoriaRoute
+  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/diretoria' | '/eventos'
+  fullPaths: '/' | '/diretoria' | '/esporte' | '/eventos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/diretoria' | '/eventos'
-  id: '__root__' | '/' | '/diretoria' | '/eventos'
+  to: '/' | '/diretoria' | '/esporte' | '/eventos'
+  id: '__root__' | '/' | '/diretoria' | '/esporte' | '/eventos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DiretoriaRoute: typeof DiretoriaRoute
+  EsporteRoute: typeof EsporteRoute
   EventosRoute: typeof EventosRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiretoriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/esporte': {
+      id: '/esporte'
+      path: '/esporte'
+      fullPath: '/esporte'
+      preLoaderRoute: typeof EsporteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/eventos': {
       id: '/eventos'
       path: '/eventos'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DiretoriaRoute: DiretoriaRoute,
+  EsporteRoute: EsporteRoute,
   EventosRoute: EventosRoute,
 }
 export const routeTree = rootRouteImport
