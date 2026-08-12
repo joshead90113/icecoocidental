@@ -104,7 +104,7 @@ export function JoinUsModal({ trigger }: JoinUsModalProps) {
                 fill="#EA4335"
               />
             </svg>
-            Entrar com Google
+            Continue com o Google
           </Button>
 
           <div className="relative">
