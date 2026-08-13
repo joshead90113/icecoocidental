@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
@@ -16,6 +17,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+
   const { data: boardMembers } = useQuery({
     queryKey: ['board-members'],
     queryFn: async () => {
@@ -236,11 +239,18 @@ function Index() {
             <input 
               type="email" 
               placeholder="Seu melhor e-mail" 
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               className="px-6 py-4 rounded-full bg-white text-foreground font-medium min-w-[300px] outline-none focus:ring-4 focus:ring-secondary/50"
             />
-            <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-black hover:scale-105 transition-transform shadow-xl">
-              Cadastrar Agora
-            </button>
+            <JoinUsModal 
+              defaultEmail={newsletterEmail}
+              trigger={
+                <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-black hover:scale-105 transition-transform shadow-xl">
+                  Cadastrar Agora
+                </button>
+              } 
+            />
           </div>
         </div>
       </section>

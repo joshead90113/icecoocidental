@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -35,20 +35,26 @@ const formSchema = z.object({
 
 interface JoinUsModalProps {
   trigger: React.ReactNode;
+  defaultEmail?: string;
 }
 
-export function JoinUsModal({ trigger }: JoinUsModalProps) {
+export function JoinUsModal({ trigger, defaultEmail = "" }: JoinUsModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const sendEmail = useServerFn(sendLeadEmail);
   const form = useForm<z.infer<typeof formSchema>>({
-
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
-      email: "",
+      email: defaultEmail,
       phone: "",
     },
   });
+
+  useEffect(() => {
+    if (defaultEmail) {
+      form.setValue("email", defaultEmail);
+    }
+  }, [defaultEmail, form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -113,7 +119,7 @@ export function JoinUsModal({ trigger }: JoinUsModalProps) {
                   <FormItem>
                     <FormLabel>E-mail</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="seu@email.com" {...field} />
+                      <Input type="email" placeholder="Seu Melhor e-mail" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
