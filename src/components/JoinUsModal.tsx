@@ -35,17 +35,17 @@ const formSchema = z.object({
 
 interface JoinUsModalProps {
   trigger: React.ReactNode;
+  defaultEmail?: string;
 }
 
-export function JoinUsModal({ trigger }: JoinUsModalProps) {
+export function JoinUsModal({ trigger, defaultEmail = "" }: JoinUsModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const sendEmail = useServerFn(sendLeadEmail);
   const form = useForm<z.infer<typeof formSchema>>({
-
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
-      email: "",
+      email: defaultEmail,
       phone: "",
     },
   });
@@ -113,7 +113,7 @@ export function JoinUsModal({ trigger }: JoinUsModalProps) {
                   <FormItem>
                     <FormLabel>E-mail</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="seu@email.com" {...field} />
+                      <Input type="email" placeholder="Seu Melhor e-mail" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
