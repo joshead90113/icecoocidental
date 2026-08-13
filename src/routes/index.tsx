@@ -300,15 +300,15 @@ function Index() {
               <div className="space-y-4 text-sm font-medium">
                 <div className="flex items-start gap-3">
                   <div className="text-secondary mt-1">📍</div>
-                  <span>Cidade Ocidental, Goiás</span>
+                  <span>Quadra SQ 13, Quadra 8, Lote 01/19, Centro, Cidade Ocidental - GO, CEP 72880-540</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="text-secondary mt-1">📧</div>
-                  <span>contato@iceco.org.br</span>
+                  <span>icecoocidental@gmail.com</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="text-secondary mt-1">📱</div>
-                  <span>(61) 9999-9999</span>
+                  <span>(61) 3625-2993</span>
                 </div>
               </div>
             </div>
