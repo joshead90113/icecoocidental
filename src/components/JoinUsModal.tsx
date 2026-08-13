@@ -22,6 +22,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useServerFn } from "@tanstack/react-start";
+import { sendLeadEmail } from "@/lib/leads.functions";
+
 
 
 const formSchema = z.object({
@@ -36,7 +39,9 @@ interface JoinUsModalProps {
 
 export function JoinUsModal({ trigger }: JoinUsModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const sendEmail = useServerFn(sendLeadEmail);
   const form = useForm<z.infer<typeof formSchema>>({
+
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
@@ -47,15 +52,29 @@ export function JoinUsModal({ trigger }: JoinUsModalProps) {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Aqui poderíamos salvar em uma tabela 'leads' ou similar
-      console.log(values);
+      // 1. Salvar no banco de dados
+      const { error: dbError } = await supabase
+        .from("leads")
+        .insert([{
+          full_name: values.fullName,
+          email: values.email,
+          phone: values.phone
+        }]);
+
+      if (dbError) throw dbError;
+
+      // 2. Enviar notificação por e-mail via Server Function
+      await sendEmail({ data: values });
+
       toast.success("Solicitação enviada com sucesso! Entraremos em contato.");
       setIsOpen(false);
       form.reset();
     } catch (error) {
+      console.error("Erro ao enviar solicitação:", error);
       toast.error("Erro ao enviar solicitação.");
     }
   }
+
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
