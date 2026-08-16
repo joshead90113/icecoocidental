@@ -5,12 +5,19 @@ import logoAsset from "@/assets/logo-iceco-transparent.png.asset.json";
 const TOTAL_MS = 3800;
 const FADE_MS = 900;
 const PARTICLES = [
+  { left: "10%", delay: "0.2s" },
   { left: "18%", delay: "0s" },
+  { left: "26%", delay: "1.2s" },
   { left: "32%", delay: "0.5s" },
+  { left: "40%", delay: "0.9s" },
   { left: "48%", delay: "1s" },
+  { left: "56%", delay: "0.15s" },
   { left: "64%", delay: "0.3s" },
+  { left: "72%", delay: "1.4s" },
   { left: "80%", delay: "0.8s" },
+  { left: "88%", delay: "0.6s" },
 ];
+
 
 
 /**
