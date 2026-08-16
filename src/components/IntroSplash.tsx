@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/logo-iceco.jpg.asset.json";
+import logoAsset from "@/assets/logo-iceco-transparent.png.asset.json";
 
 const TOTAL_MS = 3800;
 const FADE_MS = 900;
