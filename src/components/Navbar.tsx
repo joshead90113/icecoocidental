@@ -42,7 +42,6 @@ const Navbar = () => {
       ],
     },
     { label: "Galeria", to: "/" as any },
-    { label: "Galeria", to: "/" as any },
     { label: "Contato", to: "/" as any },
   ];
 
