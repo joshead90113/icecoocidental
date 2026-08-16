@@ -108,8 +108,12 @@ function Index() {
             </div>
             
             <div className="lg:col-span-5 relative">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 rotate-3 md:rotate-3 transition-transform hover:rotate-0 duration-500 max-w-sm mx-auto lg:max-w-none">
-                <img src={logo10Anos.url} alt="Logo 10 Anos I.C.E.C.O." className="w-full h-auto" />
+              <div className="relative z-10 max-w-xs mx-auto lg:max-w-sm transition-transform hover:scale-105 duration-500">
+                <img
+                  src={logo10Anos.url}
+                  alt="Símbolo institucional do I.C.E.C.O."
+                  className="w-full h-auto drop-shadow-2xl"
+                />
               </div>
               {/* Geometric elements inspired by logo */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-10" />
