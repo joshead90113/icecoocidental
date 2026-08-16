@@ -272,6 +272,24 @@
   animation: intro-ring-spin 3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@keyframes intro-ring-spin-reverse {
+  0% {
+    transform: rotate(0deg) scale(1.15);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(-360deg) scale(0.92);
+    opacity: 0.55;
+  }
+}
+
+.intro-ring-reverse {
+  animation: intro-ring-spin-reverse 3.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .intro-halo {
   animation: intro-halo 2.4s ease-in-out infinite;
 }
@@ -279,6 +297,7 @@
 .intro-particle {
   animation: intro-particle 2.6s ease-out infinite;
 }
+
 
 .intro-title {
   animation: intro-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
