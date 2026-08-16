@@ -87,27 +87,29 @@ export function IntroSplash() {
       ))}
 
       <div className="relative flex items-center justify-center">
-        <span className="intro-ring pointer-events-none absolute h-48 w-48 rounded-full border-2 border-dashed border-primary/30 sm:h-64 sm:w-64 md:h-72 md:w-72" />
+        <span className="intro-ring pointer-events-none absolute h-48 w-48 rounded-full border-2 border-dashed border-primary/30 sm:h-64 sm:w-64 md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem] xl:h-[32rem] xl:w-[32rem]" />
+        <span className="intro-ring-reverse pointer-events-none absolute hidden rounded-full border border-accent/30 md:block md:h-64 md:w-64 lg:h-[21rem] lg:w-[21rem] xl:h-[26rem] xl:w-[26rem]" />
         <img
           src={logoAsset.url}
           alt="I.C.E.C.O."
-          className="intro-logo relative h-32 w-auto sm:h-44 md:h-52"
+          className="intro-logo relative h-32 w-auto sm:h-44 md:h-56 lg:h-72 xl:h-80"
         />
       </div>
 
 
-      <div className="relative mt-8 overflow-hidden px-6 text-center">
-        <h1 className="intro-title text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
+      <div className="relative mt-8 overflow-hidden px-6 text-center lg:mt-12">
+        <h1 className="intro-title text-2xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-6xl xl:text-7xl">
           I.C.E.C.O.
         </h1>
-        <p className="intro-subtitle mt-2 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground sm:text-sm">
+        <p className="intro-subtitle mt-2 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground sm:text-sm lg:mt-4 lg:text-base lg:tracking-[0.4em]">
           Cultura · Esporte · Inclusão
         </p>
       </div>
 
-      <div className="relative mt-10 h-[3px] w-40 overflow-hidden rounded-full bg-muted sm:w-56">
+      <div className="relative mt-10 h-[3px] w-40 overflow-hidden rounded-full bg-muted sm:w-56 lg:mt-14 lg:h-1 lg:w-80 xl:w-96">
         <div className="intro-bar h-full rounded-full bg-gradient-to-r from-primary to-accent" />
       </div>
+
     </div>
   );
 }
