@@ -2,8 +2,16 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/logo-iceco.jpg.asset.json";
 
-const TOTAL_MS = 3200;
-const FADE_MS = 700;
+const TOTAL_MS = 3800;
+const FADE_MS = 900;
+const PARTICLES = [
+  { left: "18%", delay: "0s" },
+  { left: "32%", delay: "0.5s" },
+  { left: "48%", delay: "1s" },
+  { left: "64%", delay: "0.3s" },
+  { left: "80%", delay: "0.8s" },
+];
+
 
 /**
  * Abertura apresentativa exibida uma vez por sessão antes do site.
