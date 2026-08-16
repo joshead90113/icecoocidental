@@ -36,18 +36,19 @@ function Index() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen md:h-[80vh] w-full overflow-hidden flex items-center">
+      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen max-w-[100vw] min-h-[100svh] md:min-h-[80vh] overflow-hidden flex items-center border-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/30 z-10" />
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-1000"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 block h-full w-full object-cover object-center animate-in fade-in duration-1000"
         >
           <source src={heroVideoAsset.url} type="video/mp4" />
           Seu navegador não suporta vídeos.
         </video>
+
         
         <div className="container relative z-20 px-4 text-white max-w-4xl py-12">
           <div className="space-y-4 md:space-y-6 animate-in slide-in-from-left duration-700">
