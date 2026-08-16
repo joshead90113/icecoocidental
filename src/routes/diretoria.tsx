@@ -2,13 +2,26 @@ import { createFileRoute } from '@tanstack/react-router'
 import Navbar from '@/components/Navbar'
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from '@/integrations/supabase/client'
-import { cn } from '@/lib/utils'
+import { BoardMemberModal } from '@/components/BoardMemberModal'
+import { useState } from 'react'
 
 export const Route = createFileRoute('/diretoria')({
   component: BoardPage,
 })
 
+interface BoardMember {
+  id: string
+  name: string
+  role: string
+  bio: string | null
+  photo_url: string | null
+  order_index: number
+}
+
 function BoardPage() {
+  const [selectedMember, setSelectedMember] = useState<BoardMember | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
+
   const { data: boardMembers } = useQuery({
     queryKey: ['board-members'],
     queryFn: async () => {
@@ -17,9 +30,14 @@ function BoardPage() {
         .select('*')
         .order('order_index')
       if (error) throw error
-      return data
+      return data as BoardMember[]
     },
   })
+
+  const openMember = (member: BoardMember) => {
+    setSelectedMember(member)
+    setModalOpen(true)
+  }
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -68,7 +86,10 @@ function BoardPage() {
                 <p className="text-muted-foreground text-sm line-clamp-3">
                   {member.bio || 'Membro dedicado da diretoria do I.C.E.C.O., trabalhando para o fortalecimento da comunidade em Cidade Ocidental.'}
                 </p>
-                <button className="pt-2 text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                <button 
+                  onClick={() => openMember(member)}
+                  className="pt-2 text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                >
                   Ver currículo completo <span>→</span>
                 </button>
               </div>
@@ -87,7 +108,11 @@ function BoardPage() {
         </div>
       </main>
 
-      {/* Footer code can be extracted to a separate component later */}
+      <BoardMemberModal
+        member={selectedMember}
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+      />
     </div>
   )
 }
