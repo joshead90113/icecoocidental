@@ -41,9 +41,6 @@ const Navbar = () => {
         { label: "Filiados", to: "/" as any },
       ],
     },
-    { label: "Projetos", to: "/" as any },
-    { label: "Eventos", to: "/eventos" as any },
-    { label: "Notícias", to: "/" as any },
     { label: "Galeria", to: "/" as any },
     { label: "Contato", to: "/" as any },
   ];
