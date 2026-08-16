@@ -8,9 +8,8 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/logo-iceco-transparent.png.asset.json";
-import { GraduationCap, Briefcase, Trophy, Award, BookOpen, Music } from "lucide-react";
+import { GraduationCap, Briefcase, Trophy, Award, BookOpen } from "lucide-react";
 
 interface BoardMember {
   id: string;
@@ -118,12 +117,12 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
               </div>
 
               <div className="mt-6 space-y-2">
-                <DialogTitle className="text-2xl font-black text-white lg:text-3xl">
+                <h2 className="text-2xl font-black text-white lg:text-3xl">
                   {member.name}
-                </DialogTitle>
-                <DialogDescription className="text-sm font-bold uppercase tracking-widest text-white/80">
+                </h2>
+                <p className="text-sm font-bold uppercase tracking-widest text-white/80">
                   {member.role}
-                </DialogDescription>
+                </p>
               </div>
 
               <img
@@ -150,9 +149,13 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
               <DialogTitle className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
                 {isRodrigo ? "Apresentação Profissional" : member.name}
               </DialogTitle>
-              {isRodrigo && (
+              {isRodrigo ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
                   Rodrigo de Lima Silva
+                </DialogDescription>
+              ) : (
+                <DialogDescription className="text-base text-muted-foreground mt-1">
+                  {member.role}
                 </DialogDescription>
               )}
             </DialogHeader>
@@ -213,3 +216,4 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
     </Dialog>
   );
 }
+
