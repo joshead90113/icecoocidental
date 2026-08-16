@@ -68,14 +68,26 @@ export function IntroSplash() {
       )}
     >
       {/* Halo de fundo nas cores institucionais */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,var(--primary)_0%,transparent_55%)] opacity-10" />
+      <div className="intro-halo pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,var(--primary)_0%,transparent_55%)]" />
       <div className="intro-sweep pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-accent/25 to-transparent" />
 
-      <img
-        src={logoAsset.url}
-        alt="I.C.E.C.O."
-        className="intro-logo relative h-32 w-auto sm:h-44 md:h-52"
-      />
+      {PARTICLES.map((p) => (
+        <span
+          key={p.left}
+          style={{ left: p.left, animationDelay: p.delay }}
+          className="intro-particle pointer-events-none absolute bottom-1/3 h-1.5 w-1.5 rounded-full bg-accent"
+        />
+      ))}
+
+      <div className="relative flex items-center justify-center">
+        <span className="intro-ring pointer-events-none absolute h-48 w-48 rounded-full border-2 border-dashed border-primary/30 sm:h-64 sm:w-64 md:h-72 md:w-72" />
+        <img
+          src={logoAsset.url}
+          alt="I.C.E.C.O."
+          className="intro-logo relative h-32 w-auto sm:h-44 md:h-52"
+        />
+      </div>
+
 
       <div className="relative mt-8 overflow-hidden px-6 text-center">
         <h1 className="intro-title text-2xl font-extrabold tracking-tight text-primary sm:text-4xl">
