@@ -202,9 +202,12 @@ function Index() {
             <h2 className="text-4xl font-black">Diretoria <span className="text-muted-foreground/30 text-2xl font-normal block md:inline">Gestão 2026-2030</span></h2>
             <div className="h-1.5 w-20 bg-primary rounded-full" />
           </div>
-          <button className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+          <Link
+            to="/diretoria"
+            className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
+          >
             Ver currículo completo <span className="text-xl">→</span>
-          </button>
+          </Link>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
