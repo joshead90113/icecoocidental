@@ -335,3 +335,53 @@
 }
 
 
+
+/* Transição suave padrão para elementos interativos */
+@layer base {
+  button,
+  a,
+  [role="button"],
+  summary,
+  label[for] {
+    transition-property: color, background-color, border-color, text-decoration-color,
+      fill, stroke, opacity, box-shadow, transform, filter;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transition-duration: 260ms;
+    will-change: transform;
+  }
+
+  button:hover,
+  a:hover,
+  [role="button"]:hover {
+    transition-duration: 200ms;
+  }
+
+  button:active,
+  a:active,
+  [role="button"]:active {
+    transform: scale(0.97);
+    transition-duration: 90ms;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid hsl(var(--ring, 210 100% 30%));
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button,
+  a,
+  [role="button"],
+  summary,
+  label[for] {
+    transition-duration: 0.01ms !important;
+  }
+  button:active,
+  a:active,
+  [role="button"]:active {
+    transform: none;
+  }
+}
