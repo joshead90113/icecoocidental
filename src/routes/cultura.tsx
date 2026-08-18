@@ -392,6 +392,43 @@ function CulturaPage() {
           </ol>
         </section>
 
+        {/* Quadro geral de conquistas */}
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-black text-primary">
+            Quadro geral de conquistas
+          </h2>
+          <div className="h-1 w-16 bg-secondary rounded-full" />
+          <div className="overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">
+                Resultados da Fanfarra Jorge Amado por ano e competição
+              </caption>
+              <thead className="bg-primary text-primary-foreground">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs">Ano</th>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs">Competição</th>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs text-right">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ACHIEVEMENTS.map((a) => (
+                  <tr key={`${a.year}-${a.competition}`} className="border-t border-border odd:bg-muted/40">
+                    <td className="px-4 py-3 font-black text-primary whitespace-nowrap">{a.year}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{a.competition}</td>
+                    <td className="px-4 py-3 font-bold text-right whitespace-nowrap">{a.result}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            * Campeonato Goiano de 2019: há registro público do título, mas ele não integra a
+            relação que forma o “Pentacampeonato Goiano” do histórico institucional. A contagem
+            oficial deve ser confirmada com o certificado da edição.
+          </p>
+        </section>
+
+
         <aside className="rounded-3xl bg-primary/5 border border-primary/10 p-8 md:p-12 text-center space-y-4">
           <img
             src={emblemaAsset.url}
