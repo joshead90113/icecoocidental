@@ -156,18 +156,33 @@ const SECTIONS: readonly Section[] = [
     ],
   },
   {
-    title: "15. A presença no cenário competitivo nacional em 2025",
+    title: "15. 2025: o ano que atualizou a história",
     paragraphs: [
-      "Documentos oficiais da Liga de Bandas e Fanfarras registram a Corporação Musical Jorge Amado – Cidade Ocidental/GO entre as inscritas no Campeonato Brasileiro 2025, na categoria juvenil de Banda de Percussão com Instrumentos Melódicos, com pontuação registrada de 78 pontos.",
-      "A participação em 2025 confirma que o título brasileiro conquistado anteriormente não foi um episódio isolado.",
+      "Documentos oficiais da Liga de Bandas e Fanfarras registram a Corporação Musical Jorge Amado – Cidade Ocidental/GO no Campeonato Brasileiro 2025, na categoria Banda de Percussão com Instrumentos Melódicos – Juvenil, realizado em Amparo/SP.",
+      "O ano reuniu o título goiano, o título brasiliense e, principalmente, o segundo título nacional. A própria corporação passou a se apresentar como “Campeã Brasileira 2023 — Bi-Campeã Brasileira 2025”.",
+    ],
+    bullets: [
+      "Campeã Goiana – 2025",
+      "Campeã Brasiliense – 2025",
+      "Campeã Brasileira – 2025 (Amparo/SP)",
+      "Entrega dos troféus goiano e brasiliense registrada publicamente",
     ],
   },
   {
     title: "16. Participação em competições virtuais e novos formatos",
     paragraphs: [
-      "Na 2ª Copa América Virtual de Bandas e Fanfarras – edição 2025, a corporação aparece classificada na categoria Banda de Percussão com Instrumentos Melódicos – Infantojuvenil, obtendo a segunda colocação, com nota final de 195,00.",
+      "Na 2ª Copa América Virtual de Bandas e Fanfarras – edição 2025, a corporação obteve a segunda colocação na categoria Banda de Percussão com Instrumentos Melódicos – Infantojuvenil, com nota final de 195,00 (técnica 190,1 e artística 4,9).",
+      "Por se tratar de competição em formato virtual, o resultado integra o acervo histórico, mas é apresentado separadamente dos campeonatos presenciais.",
     ],
   },
+  {
+    title: "16.1. Projeto “Tocando & Educando”",
+    paragraphs: [
+      "Em 2025, documento oficial do Governo de Goiás registra o projeto “Tocando & Educando – Manutenção e Desenvolvimento da Fanfarra Jorge Amado, Cidade Ocidental-GO”, sob responsabilidade de Rodrigo de Lima Silva, classificado com nota 96,5 em edital estadual de estruturação e manutenção de bandas, corais e fanfarras, com valor pleiteado de R$ 100 mil.",
+      "O registro demonstra que a corporação não é apenas competitiva: existe também um projeto formal de manutenção e desenvolvimento da atividade musical e educacional.",
+    ],
+  },
+
   {
     title: "17. Uma trajetória marcada pela formação de centenas de jovens",
     paragraphs: [
