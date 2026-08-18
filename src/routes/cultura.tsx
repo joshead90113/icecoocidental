@@ -259,20 +259,46 @@ const TIMELINE: readonly { readonly year: string; readonly text: string }[] = [
   { year: "2013", text: "Criação do grupo no Colégio Estadual Jorge Amado, idealizado pelo professor Rodrigo Lima, com poucos instrumentos e estrutura limitada." },
   { year: "2017", text: "Primeiro título goiano e primeiro título brasiliense. Participação em competição realizada em Sergipe." },
   { year: "2018", text: "Nova conquista do Campeonato Goiano e do Campeonato Brasiliense." },
-  { year: "2019", text: "Campeã Brasiliense e Vice-Campeã Brasileira." },
+  { year: "2019", text: "Campeã Brasiliense e Vice-Campeã Brasileira, com 1º lugar em Pavilhão Nacional e 2º lugar em Corpo Musical, Baliza e Corpo Coreográfico. Há ainda registro público de título goiano neste ano, a confirmar." },
   { year: "2020", text: "Mais de 300 jovens já haviam passado pelo projeto; participação em competições adaptadas ao período da pandemia." },
   { year: "2022", text: "Conquista do Campeonato Goiano." },
-  { year: "2023", text: "Campeã Goiana, Campeã Brasiliense e Campeã Brasileira em São Paulo. Honraria “Orgulho Nosso” ao maestro Rodrigo de Lima." },
+  { year: "2023", text: "Campeã Goiana (Anápolis), Campeã Brasiliense e Campeã Brasileira em São Paulo. Honraria “Orgulho Nosso” ao maestro Rodrigo de Lima." },
   { year: "2024", text: "Nova conquista do Campeonato Goiano e do Campeonato Brasiliense." },
-  { year: "2025", text: "Campeonato Brasileiro da LBF, 2ª Copa América Virtual e Desfile Cívico de 7 de Setembro." },
-  { year: "2026", text: "Meta de representar Cidade Ocidental nos campeonatos Goiano e Brasiliense, buscando vaga para o Brasileiro em João Pessoa (PB)." },
+  { year: "2025", text: "Campeã Goiana, Campeã Brasiliense e Bi-Campeã Brasileira (Amparo/SP). 2º lugar na 2ª Copa América Virtual e projeto “Tocando & Educando” classificado em edital estadual." },
+  { year: "2026", text: "Meta de representar Cidade Ocidental nos campeonatos Goiano e Brasiliense, buscando vaga para o Brasileiro em João Pessoa (PB). Sem novos títulos confirmados até o momento." },
+];
+
+/** Quadro geral de resultados por ano e competição. */
+const ACHIEVEMENTS: readonly {
+  readonly year: string;
+  readonly competition: string;
+  readonly result: string;
+}[] = [
+  { year: "2017", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2017", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2018", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2018", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2019", competition: "Campeonato Goiano", result: "🥇 Campeã*" },
+  { year: "2019", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2019", competition: "Campeonato Brasileiro", result: "🥈 Vice-campeã" },
+  { year: "2022", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Brasileiro", result: "🥇 Campeã Brasileira" },
+  { year: "2024", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2024", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Brasileiro", result: "🥇 Campeã Brasileira" },
+  { year: "2025", competition: "Copa América Virtual", result: "🥈 2º lugar" },
 ];
 
 const STATS: readonly { readonly value: string; readonly label: string }[] = [
-  { value: "5", label: "Títulos Goianos" },
-  { value: "4", label: "Títulos Brasilienses" },
-  { value: "1", label: "Campeonato Brasileiro" },
+  { value: "6", label: "Títulos Goianos" },
+  { value: "6", label: "Títulos Brasilienses" },
+  { value: "2", label: "Títulos Brasileiros" },
   { value: "300+", label: "Jovens atendidos" },
+
 ];
 
 function CulturaPage() {
