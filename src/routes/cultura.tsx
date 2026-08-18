@@ -67,20 +67,24 @@ const SECTIONS: readonly Section[] = [
   {
     title: "5. A consolidação no cenário goiano",
     paragraphs: [
-      "Com o passar dos anos, a corporação transformou sua participação em competições em resultados expressivos, conquistando o título de Campeã Goiana em cinco edições e sendo reconhecida como Pentacampeã Goiana.",
+      "Com o passar dos anos, a corporação transformou sua participação em competições em resultados expressivos. O histórico institucional a reconhece como Pentacampeã Goiana (2017, 2018, 2022, 2023 e 2024), e em 2025 a corporação divulgou mais um título estadual.",
+      "Existe ainda registro público de um título goiano em 2019, mencionado no currículo do regente (5º Campeonato Goiano de Bandas e Fanfarras). Como esse ano não integra a contagem oficial do pentacampeonato, ele é apresentado aqui como registro localizado, a ser confirmado por certificado antes de alterar a contagem.",
     ],
     bullets: [
       "Campeã Goiana – 2017",
       "Campeã Goiana – 2018",
+      "Campeã Goiana – 2019 (registro a confirmar)",
       "Campeã Goiana – 2022",
       "Campeã Goiana – 2023",
       "Campeã Goiana – 2024",
+      "Campeã Goiana – 2025",
     ],
   },
   {
     title: "6. Destaque também no Distrito Federal e Entorno",
     paragraphs: [
-      "A localização de Cidade Ocidental, no Entorno do Distrito Federal, colocou a fanfarra em contato direto com o circuito cultural e competitivo de Brasília e das cidades próximas, com títulos de Campeã Brasiliense.",
+      "A localização de Cidade Ocidental, no Entorno do Distrito Federal, colocou a fanfarra em contato direto com o circuito cultural e competitivo de Brasília e das cidades próximas, acumulando títulos de Campeã Brasiliense.",
+      "Em 2025 houve registro público da entrega dos troféus de Campeão Goiano e Campeão Brasiliense, o que comprova tanto os títulos quanto a existência das peças no acervo.",
     ],
     bullets: [
       "Campeã Brasiliense – 2017",
@@ -88,14 +92,17 @@ const SECTIONS: readonly Section[] = [
       "Campeã Brasiliense – 2019",
       "Campeã Brasiliense – 2023",
       "Campeã Brasiliense – 2024",
+      "Campeã Brasiliense – 2025",
     ],
   },
   {
     title: "7. A chegada ao cenário nacional",
     paragraphs: [
       "Em 2019, a banda conquistou o título de Vice-Campeã Brasileira. O resultado marcou uma etapa importante: depois de conquistar espaço regional, a corporação passou a disputar diretamente com grupos de diferentes estados brasileiros.",
+      "Os títulos nacionais viriam em seguida: Campeã Brasileira em 2023 e novamente em 2025, o que consagra a corporação como Bicampeã Brasileira.",
     ],
   },
+
   {
     title: "8. Reconhecimento oficial do desempenho em Goiás",
     paragraphs: [
@@ -149,18 +156,33 @@ const SECTIONS: readonly Section[] = [
     ],
   },
   {
-    title: "15. A presença no cenário competitivo nacional em 2025",
+    title: "15. 2025: o ano que atualizou a história",
     paragraphs: [
-      "Documentos oficiais da Liga de Bandas e Fanfarras registram a Corporação Musical Jorge Amado – Cidade Ocidental/GO entre as inscritas no Campeonato Brasileiro 2025, na categoria juvenil de Banda de Percussão com Instrumentos Melódicos, com pontuação registrada de 78 pontos.",
-      "A participação em 2025 confirma que o título brasileiro conquistado anteriormente não foi um episódio isolado.",
+      "Documentos oficiais da Liga de Bandas e Fanfarras registram a Corporação Musical Jorge Amado – Cidade Ocidental/GO no Campeonato Brasileiro 2025, na categoria Banda de Percussão com Instrumentos Melódicos – Juvenil, realizado em Amparo/SP.",
+      "O ano reuniu o título goiano, o título brasiliense e, principalmente, o segundo título nacional. A própria corporação passou a se apresentar como “Campeã Brasileira 2023 — Bi-Campeã Brasileira 2025”.",
+    ],
+    bullets: [
+      "Campeã Goiana – 2025",
+      "Campeã Brasiliense – 2025",
+      "Campeã Brasileira – 2025 (Amparo/SP)",
+      "Entrega dos troféus goiano e brasiliense registrada publicamente",
     ],
   },
   {
     title: "16. Participação em competições virtuais e novos formatos",
     paragraphs: [
-      "Na 2ª Copa América Virtual de Bandas e Fanfarras – edição 2025, a corporação aparece classificada na categoria Banda de Percussão com Instrumentos Melódicos – Infantojuvenil, obtendo a segunda colocação, com nota final de 195,00.",
+      "Na 2ª Copa América Virtual de Bandas e Fanfarras – edição 2025, a corporação obteve a segunda colocação na categoria Banda de Percussão com Instrumentos Melódicos – Infantojuvenil, com nota final de 195,00 (técnica 190,1 e artística 4,9).",
+      "Por se tratar de competição em formato virtual, o resultado integra o acervo histórico, mas é apresentado separadamente dos campeonatos presenciais.",
     ],
   },
+  {
+    title: "16.1. Projeto “Tocando & Educando”",
+    paragraphs: [
+      "Em 2025, documento oficial do Governo de Goiás registra o projeto “Tocando & Educando – Manutenção e Desenvolvimento da Fanfarra Jorge Amado, Cidade Ocidental-GO”, sob responsabilidade de Rodrigo de Lima Silva, classificado com nota 96,5 em edital estadual de estruturação e manutenção de bandas, corais e fanfarras, com valor pleiteado de R$ 100 mil.",
+      "O registro demonstra que a corporação não é apenas competitiva: existe também um projeto formal de manutenção e desenvolvimento da atividade musical e educacional.",
+    ],
+  },
+
   {
     title: "17. Uma trajetória marcada pela formação de centenas de jovens",
     paragraphs: [
@@ -237,20 +259,46 @@ const TIMELINE: readonly { readonly year: string; readonly text: string }[] = [
   { year: "2013", text: "Criação do grupo no Colégio Estadual Jorge Amado, idealizado pelo professor Rodrigo Lima, com poucos instrumentos e estrutura limitada." },
   { year: "2017", text: "Primeiro título goiano e primeiro título brasiliense. Participação em competição realizada em Sergipe." },
   { year: "2018", text: "Nova conquista do Campeonato Goiano e do Campeonato Brasiliense." },
-  { year: "2019", text: "Campeã Brasiliense e Vice-Campeã Brasileira." },
+  { year: "2019", text: "Campeã Brasiliense e Vice-Campeã Brasileira, com 1º lugar em Pavilhão Nacional e 2º lugar em Corpo Musical, Baliza e Corpo Coreográfico. Há ainda registro público de título goiano neste ano, a confirmar." },
   { year: "2020", text: "Mais de 300 jovens já haviam passado pelo projeto; participação em competições adaptadas ao período da pandemia." },
   { year: "2022", text: "Conquista do Campeonato Goiano." },
-  { year: "2023", text: "Campeã Goiana, Campeã Brasiliense e Campeã Brasileira em São Paulo. Honraria “Orgulho Nosso” ao maestro Rodrigo de Lima." },
+  { year: "2023", text: "Campeã Goiana (Anápolis), Campeã Brasiliense e Campeã Brasileira em São Paulo. Honraria “Orgulho Nosso” ao maestro Rodrigo de Lima." },
   { year: "2024", text: "Nova conquista do Campeonato Goiano e do Campeonato Brasiliense." },
-  { year: "2025", text: "Campeonato Brasileiro da LBF, 2ª Copa América Virtual e Desfile Cívico de 7 de Setembro." },
-  { year: "2026", text: "Meta de representar Cidade Ocidental nos campeonatos Goiano e Brasiliense, buscando vaga para o Brasileiro em João Pessoa (PB)." },
+  { year: "2025", text: "Campeã Goiana, Campeã Brasiliense e Bi-Campeã Brasileira (Amparo/SP). 2º lugar na 2ª Copa América Virtual e projeto “Tocando & Educando” classificado em edital estadual." },
+  { year: "2026", text: "Meta de representar Cidade Ocidental nos campeonatos Goiano e Brasiliense, buscando vaga para o Brasileiro em João Pessoa (PB). Sem novos títulos confirmados até o momento." },
+];
+
+/** Quadro geral de resultados por ano e competição. */
+const ACHIEVEMENTS: readonly {
+  readonly year: string;
+  readonly competition: string;
+  readonly result: string;
+}[] = [
+  { year: "2017", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2017", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2018", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2018", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2019", competition: "Campeonato Goiano", result: "🥇 Campeã*" },
+  { year: "2019", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2019", competition: "Campeonato Brasileiro", result: "🥈 Vice-campeã" },
+  { year: "2022", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2023", competition: "Campeonato Brasileiro", result: "🥇 Campeã Brasileira" },
+  { year: "2024", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2024", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Goiano", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Brasiliense", result: "🥇 Campeã" },
+  { year: "2025", competition: "Campeonato Brasileiro", result: "🥇 Campeã Brasileira" },
+  { year: "2025", competition: "Copa América Virtual", result: "🥈 2º lugar" },
 ];
 
 const STATS: readonly { readonly value: string; readonly label: string }[] = [
-  { value: "5", label: "Títulos Goianos" },
-  { value: "4", label: "Títulos Brasilienses" },
-  { value: "1", label: "Campeonato Brasileiro" },
+  { value: "6", label: "Títulos Goianos" },
+  { value: "6", label: "Títulos Brasilienses" },
+  { value: "2", label: "Títulos Brasileiros" },
   { value: "300+", label: "Jovens atendidos" },
+
 ];
 
 function CulturaPage() {
@@ -343,6 +391,43 @@ function CulturaPage() {
             ))}
           </ol>
         </section>
+
+        {/* Quadro geral de conquistas */}
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-black text-primary">
+            Quadro geral de conquistas
+          </h2>
+          <div className="h-1 w-16 bg-secondary rounded-full" />
+          <div className="overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">
+                Resultados da Fanfarra Jorge Amado por ano e competição
+              </caption>
+              <thead className="bg-primary text-primary-foreground">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs">Ano</th>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs">Competição</th>
+                  <th scope="col" className="px-4 py-3 font-black uppercase tracking-widest text-xs text-right">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ACHIEVEMENTS.map((a) => (
+                  <tr key={`${a.year}-${a.competition}`} className="border-t border-border odd:bg-muted/40">
+                    <td className="px-4 py-3 font-black text-primary whitespace-nowrap">{a.year}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{a.competition}</td>
+                    <td className="px-4 py-3 font-bold text-right whitespace-nowrap">{a.result}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            * Campeonato Goiano de 2019: há registro público do título, mas ele não integra a
+            relação que forma o “Pentacampeonato Goiano” do histórico institucional. A contagem
+            oficial deve ser confirmada com o certificado da edição.
+          </p>
+        </section>
+
 
         <aside className="rounded-3xl bg-primary/5 border border-primary/10 p-8 md:p-12 text-center space-y-4">
           <img
