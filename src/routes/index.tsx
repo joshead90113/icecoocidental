@@ -155,9 +155,12 @@ function Index() {
                     <span key={t} className="text-xs font-bold bg-muted px-2 py-1 rounded">{t}</span>
                   ))}
                 </div>
-                <button className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                <Link
+                  to="/cultura"
+                  className="block w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-center hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+                >
                   Explorar Cultura
-                </button>
+                </Link>
               </div>
             </div>
 
