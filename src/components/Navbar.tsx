@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { JoinUsModal } from "./JoinUsModal";
+import logoAsset from "@/assets/logo-iceco-3d.png.asset.json";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
