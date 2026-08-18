@@ -67,20 +67,24 @@ const SECTIONS: readonly Section[] = [
   {
     title: "5. A consolidação no cenário goiano",
     paragraphs: [
-      "Com o passar dos anos, a corporação transformou sua participação em competições em resultados expressivos, conquistando o título de Campeã Goiana em cinco edições e sendo reconhecida como Pentacampeã Goiana.",
+      "Com o passar dos anos, a corporação transformou sua participação em competições em resultados expressivos. O histórico institucional a reconhece como Pentacampeã Goiana (2017, 2018, 2022, 2023 e 2024), e em 2025 a corporação divulgou mais um título estadual.",
+      "Existe ainda registro público de um título goiano em 2019, mencionado no currículo do regente (5º Campeonato Goiano de Bandas e Fanfarras). Como esse ano não integra a contagem oficial do pentacampeonato, ele é apresentado aqui como registro localizado, a ser confirmado por certificado antes de alterar a contagem.",
     ],
     bullets: [
       "Campeã Goiana – 2017",
       "Campeã Goiana – 2018",
+      "Campeã Goiana – 2019 (registro a confirmar)",
       "Campeã Goiana – 2022",
       "Campeã Goiana – 2023",
       "Campeã Goiana – 2024",
+      "Campeã Goiana – 2025",
     ],
   },
   {
     title: "6. Destaque também no Distrito Federal e Entorno",
     paragraphs: [
-      "A localização de Cidade Ocidental, no Entorno do Distrito Federal, colocou a fanfarra em contato direto com o circuito cultural e competitivo de Brasília e das cidades próximas, com títulos de Campeã Brasiliense.",
+      "A localização de Cidade Ocidental, no Entorno do Distrito Federal, colocou a fanfarra em contato direto com o circuito cultural e competitivo de Brasília e das cidades próximas, acumulando títulos de Campeã Brasiliense.",
+      "Em 2025 houve registro público da entrega dos troféus de Campeão Goiano e Campeão Brasiliense, o que comprova tanto os títulos quanto a existência das peças no acervo.",
     ],
     bullets: [
       "Campeã Brasiliense – 2017",
@@ -88,14 +92,17 @@ const SECTIONS: readonly Section[] = [
       "Campeã Brasiliense – 2019",
       "Campeã Brasiliense – 2023",
       "Campeã Brasiliense – 2024",
+      "Campeã Brasiliense – 2025",
     ],
   },
   {
     title: "7. A chegada ao cenário nacional",
     paragraphs: [
       "Em 2019, a banda conquistou o título de Vice-Campeã Brasileira. O resultado marcou uma etapa importante: depois de conquistar espaço regional, a corporação passou a disputar diretamente com grupos de diferentes estados brasileiros.",
+      "Os títulos nacionais viriam em seguida: Campeã Brasileira em 2023 e novamente em 2025, o que consagra a corporação como Bicampeã Brasileira.",
     ],
   },
+
   {
     title: "8. Reconhecimento oficial do desempenho em Goiás",
     paragraphs: [
