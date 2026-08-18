@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { JoinUsModal } from "./JoinUsModal";
+import logoAsset from "@/assets/logo-iceco-3d.png.asset.json";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,12 +50,18 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logoAsset.url}
+            alt="Logo do I.C.E.C.O."
+            className="h-12 w-auto shrink-0"
+          />
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-primary">I.C.E.C.O.</span>
             <span className="text-[10px] font-medium text-muted-foreground uppercase leading-tight">Instituto Cultural e Esportivo</span>
           </div>
         </Link>
+
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-6">
