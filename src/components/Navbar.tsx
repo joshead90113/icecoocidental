@@ -19,10 +19,10 @@ const Navbar = () => {
     },
     {
       label: "Cultura",
-      to: "/" as any,
+      to: "/cultura" as any,
       children: [
-        { label: "Música", to: "/" as any },
-        { label: "Bandas e Fanfarras", to: "/" as any },
+        { label: "Música", to: "/cultura" as any },
+        { label: "Fanfarra Jorge Amado", to: "/cultura" as any },
         { label: "Artistas", to: "/" as any },
         { label: "Teatro", to: "/" as any },
       ],
