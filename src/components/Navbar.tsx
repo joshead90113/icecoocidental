@@ -12,7 +12,7 @@ const Navbar = () => {
     {
       label: "O I.C.E.C.O.",
       children: [
-        { label: "Quem somos", to: "/" as any },
+        { label: "Quem somos", to: "/quem-somos" },
         { label: "Diretoria", to: "/diretoria" },
         { label: "10 Anos de História", to: "/" as any },
       ],
