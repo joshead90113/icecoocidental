@@ -301,7 +301,7 @@ function Index() {
                 <li><a href="#" className="hover:text-primary transition-colors">Diretoria</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Projetos</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Notícias</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Galeria</a></li>
+                <li><Link to="/galeria" className="hover:text-primary transition-colors">Galeria</Link></li>
               </ul>
             </div>
             
