@@ -43,7 +43,7 @@ const Navbar = () => {
         { label: "Filiados", to: "/" as any },
       ],
     },
-    { label: "Galeria", to: "/" as any },
+    { label: "Galeria", to: "/galeria" },
     { label: "Contato", to: "/" as any },
   ];
 
