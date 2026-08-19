@@ -15,7 +15,7 @@ function Eventos() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('raffles')
-        .select('*')
+        .select('id, title, description, prize, ticket_price, draw_date, pix_qr_code_url, status, image_url, created_at')
         .order('draw_date', { ascending: true });
       if (error) throw error;
       return data;
@@ -93,8 +93,8 @@ function Eventos() {
                       <div className="flex items-center gap-3 p-3 bg-primary/5 rounded-xl border border-primary/20">
                         <Wallet className="h-5 w-5 text-primary" />
                         <div>
-                          <span className="block text-[10px] font-black uppercase text-primary/70">Chave PIX para adquirir:</span>
-                          <span className="font-bold text-sm selection:bg-primary selection:text-white">{raffle.pix_key}</span>
+                          <span className="block text-[10px] font-black uppercase text-primary/70">Como adquirir:</span>
+                          <span className="font-bold text-sm">Solicite a chave PIX pelo telefone (61) 3625-2993</span>
                         </div>
                       </div>
                       <button className="w-full py-4 bg-secondary text-secondary-foreground font-black rounded-xl hover:scale-[1.02] transition-transform shadow-xl">
