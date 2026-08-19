@@ -79,36 +79,55 @@ function Index() {
       {/* 10 Anos Section - Modern Mosaic */}
       <section className="py-24 bg-background overflow-hidden">
         <div className="container px-4">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-8">
               <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase text-sm">
                 <div className="h-px w-8 bg-primary" />
                 Nossa História
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-foreground leading-tight">
-                10 anos construindo <span className="text-primary italic">histórias</span> de sucesso
+                10 anos de <span className="text-primary italic">I.C.E.C.O.</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-                Há uma década, o I.C.E.C.O. atua para fortalecer a cultura, o esporte e as iniciativas sociais, 
-                conectando pessoas, talentos e oportunidades em Cidade Ocidental e região.
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl font-medium">
+                Uma década transformando vidas por meio da cultura, do esporte, da educação e da cidadania.
               </p>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-                {[
-                  { label: "Anos de atuação", value: "10+" },
-                  { label: "Cultura", value: "Ativa" },
-                  { label: "Esporte", value: "Forte" },
-                  { label: "Comunidade", value: "Unida" },
-                ].map((stat) => (
-                  <div key={stat.label} className="space-y-1">
-                    <div className="text-3xl font-black text-primary">{stat.value}</div>
-                    <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</div>
-                  </div>
-                ))}
+
+              <div className="space-y-5 text-muted-foreground leading-relaxed max-w-3xl">
+                <p>
+                  Fundado em 22 de abril de 2016, o Instituto Cultural e Esportivo de Cidade Ocidental — I.C.E.C.O. — nasceu com a missão de promover ações de relevância social, cultural, educacional e esportiva, oferecendo oportunidades e fortalecendo a participação da comunidade.
+                </p>
+                <p>
+                  Ao longo de seus 10 anos de história, o Instituto consolidou uma atuação voltada à valorização das pessoas e ao desenvolvimento social. Suas iniciativas abrangem bandas e fanfarras, música, dança, teatro, artes visuais, formação profissional, esporte, lazer, assistência social e eventos culturais, criando espaços de aprendizado, expressão e convivência.
+                </p>
+                <p>
+                  A cultura ocupa um lugar especial nessa trajetória. O I.C.E.C.O. promove a formação artística e musical, oficinas de instrumentos, produção de espetáculos, festivais, apresentações e projetos que utilizam a arte como instrumento de educação, inclusão e transformação social.
+                </p>
+                <p>
+                  Também fazem parte dessa história ações voltadas ao esporte, à inclusão social, à qualificação profissional, ao voluntariado, à defesa de direitos e à melhoria da qualidade de vida, além do compromisso com a proteção e preservação do meio ambiente.
+                </p>
+                <p>
+                  Durante essa primeira década, o I.C.E.C.O. construiu sua trajetória por meio da união entre comunidade, artistas, atletas, educadores, voluntários, instituições públicas, empresas e organizações parceiras, ampliando as possibilidades de atuação e fortalecendo sua presença social.
+                </p>
+
+                <div className="rounded-2xl bg-muted/50 border border-border/50 p-6 space-y-4">
+                  <h3 className="text-xl font-black text-primary">Uma década. Muitas histórias. Um propósito.</h3>
+                  <p>
+                    Celebrar os 10 anos do I.C.E.C.O. é celebrar cada pessoa que participou dessa caminhada, cada projeto realizado, cada apresentação, cada atividade esportiva, cada oficina e cada oportunidade criada.
+                  </p>
+                  <p>
+                    É olhar para o caminho percorrido e reconhecer uma história construída coletivamente — e, ao mesmo tempo, olhar para o futuro com a certeza de que ainda há muito a fazer.
+                  </p>
+                  <p className="font-bold text-foreground">
+                    I.C.E.C.O. — 10 anos de história, cultura, esporte, educação e cidadania.
+                  </p>
+                  <p className="font-bold text-primary">
+                    Uma década de transformação. Um futuro de novas possibilidades.
+                  </p>
+                </div>
               </div>
             </div>
-            
-            <div className="lg:col-span-5 relative">
+
+            <div className="lg:col-span-5 relative lg:sticky lg:top-28">
               <div className="relative z-10 max-w-xs mx-auto lg:max-w-sm transition-transform hover:scale-105 duration-500">
                 <img
                   src={logo10Anos.url}
