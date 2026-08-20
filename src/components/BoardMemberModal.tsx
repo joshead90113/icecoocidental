@@ -49,6 +49,27 @@ const rodrigoCurriculum = {
   ],
 };
 
+const mateusCurriculum = {
+  headline: "Músico Percussionista",
+  summary:
+    "Iniciou seus estudos musicais em 2023 na Corporação Musical Jorge Amado — instituição fundada em 2012 —, onde segue atuando até hoje. Tem como orientadores o Professor Regente Rodrigo de Lima e a Professora de Coreografia Andreia.",
+  education: [
+    "Participação no 3º Workshop da Federação Metropolitana de Bandas e Fanfarras (FMBF)",
+    "Certificado do Projeto Tocando é Educando (nas áreas de Sopro Metal e Percussão)",
+  ],
+  experience: [
+    "Percussionista na Corporação Musical Jorge Amado desde 2023, atuando em ensaios, apresentações e competições.",
+    "Participação em oficinas e workshops voltados à formação musical e à prática coletiva em bandas e fanfarras.",
+    "Desenvolvimento técnico em percussão sob orientação do Professor Regente Rodrigo de Lima.",
+  ],
+  achievements: [
+    "🥇 Tricampeão Goiano — 2023, 2024 e 2025",
+    "🥇 Bicampeão Brasiliense — 2023 e 2025",
+    "🥇 Bicampeão Brasileiro — 2023 e 2025",
+    "🏆 Finalista da Fase Estadual do FAEGO (Festival Arte Educa) — 2023 a 2025",
+  ],
+};
+
 function SectionTitle({
   icon: Icon,
   children,
@@ -85,6 +106,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
   if (!member) return null;
 
   const isRodrigo = member.name.toLowerCase().includes("rodrigo");
+  const isMateus = member.name.toLowerCase().includes("mateus") || member.name.toLowerCase().includes("matheus");
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -147,11 +169,15 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 Perfil Profissional
               </div>
               <DialogTitle className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
-                {isRodrigo ? "Apresentação Profissional" : member.name}
+                {isRodrigo || isMateus ? "Apresentação Profissional" : member.name}
               </DialogTitle>
               {isRodrigo ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
                   Rodrigo de Lima Silva
+                </DialogDescription>
+              ) : isMateus ? (
+                <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
+                  MATHEUS WELLINGTON — Músico Percussionista
                 </DialogDescription>
               ) : (
                 <DialogDescription className="text-base text-muted-foreground mt-1">
@@ -184,6 +210,32 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 <section>
                   <SectionTitle icon={Trophy}>Realizações e Destaques</SectionTitle>
                   <BulletList items={rodrigoCurriculum.achievements} />
+                </section>
+              </div>
+            ) : isMateus ? (
+              <div className="space-y-8">
+                <p className="text-lg font-bold text-foreground leading-relaxed border-l-4 border-accent pl-4">
+                  {mateusCurriculum.headline}
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {mateusCurriculum.summary}
+                </p>
+
+                <div className="h-px bg-border" />
+
+                <section>
+                  <SectionTitle icon={GraduationCap}>Formação e Qualificações</SectionTitle>
+                  <BulletList items={mateusCurriculum.education} />
+                </section>
+
+                <section>
+                  <SectionTitle icon={Briefcase}>Trajetória na Música</SectionTitle>
+                  <BulletList items={mateusCurriculum.experience} />
+                </section>
+
+                <section>
+                  <SectionTitle icon={Trophy}>Principais Títulos e Conquistas</SectionTitle>
+                  <BulletList items={mateusCurriculum.achievements} />
                 </section>
               </div>
             ) : (
