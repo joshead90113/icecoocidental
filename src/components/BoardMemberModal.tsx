@@ -106,6 +106,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
   if (!member) return null;
 
   const isRodrigo = member.name.toLowerCase().includes("rodrigo");
+  const isMateus = member.name.toLowerCase().includes("mateus") || member.name.toLowerCase().includes("matheus");
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
