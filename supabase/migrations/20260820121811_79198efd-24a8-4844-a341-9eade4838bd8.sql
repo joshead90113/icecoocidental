@@ -1,0 +1,1 @@
+UPDATE public.board_members SET photo_url = '/__l5e/assets-v1/5bd24f18-2748-4a77-8856-3b33a3248676/lucinaldo.png' WHERE id = 'f4b4967a-d537-4c9f-9a3a-604f73b8b26c';
