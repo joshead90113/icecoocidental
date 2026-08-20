@@ -169,11 +169,15 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 Perfil Profissional
               </div>
               <DialogTitle className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
-                {isRodrigo ? "Apresentação Profissional" : member.name}
+                {isRodrigo || isMateus ? "Apresentação Profissional" : member.name}
               </DialogTitle>
               {isRodrigo ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
                   Rodrigo de Lima Silva
+                </DialogDescription>
+              ) : isMateus ? (
+                <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
+                  MATHEUS WELLINGTON — Músico Percussionista
                 </DialogDescription>
               ) : (
                 <DialogDescription className="text-base text-muted-foreground mt-1">
@@ -206,6 +210,32 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 <section>
                   <SectionTitle icon={Trophy}>Realizações e Destaques</SectionTitle>
                   <BulletList items={rodrigoCurriculum.achievements} />
+                </section>
+              </div>
+            ) : isMateus ? (
+              <div className="space-y-8">
+                <p className="text-lg font-bold text-foreground leading-relaxed border-l-4 border-accent pl-4">
+                  {mateusCurriculum.headline}
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {mateusCurriculum.summary}
+                </p>
+
+                <div className="h-px bg-border" />
+
+                <section>
+                  <SectionTitle icon={GraduationCap}>Formação e Qualificações</SectionTitle>
+                  <BulletList items={mateusCurriculum.education} />
+                </section>
+
+                <section>
+                  <SectionTitle icon={Briefcase}>Trajetória na Música</SectionTitle>
+                  <BulletList items={mateusCurriculum.experience} />
+                </section>
+
+                <section>
+                  <SectionTitle icon={Trophy}>Principais Títulos e Conquistas</SectionTitle>
+                  <BulletList items={mateusCurriculum.achievements} />
                 </section>
               </div>
             ) : (
