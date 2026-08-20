@@ -49,6 +49,27 @@ const rodrigoCurriculum = {
   ],
 };
 
+const mateusCurriculum = {
+  headline: "Músico Percussionista",
+  summary:
+    "Iniciou seus estudos musicais em 2023 na Corporação Musical Jorge Amado — instituição fundada em 2012 —, onde segue atuando até hoje. Tem como orientadores o Professor Regente Rodrigo de Lima e a Professora de Coreografia Andreia.",
+  education: [
+    "Participação no 3º Workshop da Federação Metropolitana de Bandas e Fanfarras (FMBF)",
+    "Certificado do Projeto Tocando é Educando (nas áreas de Sopro Metal e Percussão)",
+  ],
+  experience: [
+    "Percussionista na Corporação Musical Jorge Amado desde 2023, atuando em ensaios, apresentações e competições.",
+    "Participação em oficinas e workshops voltados à formação musical e à prática coletiva em bandas e fanfarras.",
+    "Desenvolvimento técnico em percussão sob orientação do Professor Regente Rodrigo de Lima.",
+  ],
+  achievements: [
+    "🥇 Tricampeão Goiano — 2023, 2024 e 2025",
+    "🥇 Bicampeão Brasiliense — 2023 e 2025",
+    "🥇 Bicampeão Brasileiro — 2023 e 2025",
+    "🏆 Finalista da Fase Estadual do FAEGO (Festival Arte Educa) — 2023 a 2025",
+  ],
+};
+
 function SectionTitle({
   icon: Icon,
   children,
