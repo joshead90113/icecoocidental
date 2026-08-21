@@ -89,7 +89,7 @@ function QuemSomosPage() {
           {/* Essência */}
           <section className="rounded-3xl bg-muted/50 border border-border/50 p-8 md:p-12 space-y-4">
             <h2 className="text-2xl md:text-3xl font-black text-primary">Nossa Essência e Propósito</h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-justify leading-relaxed">
               Nascemos da convicção de que a cultura, o esporte, a educação e a assistência social são pilares
               fundamentais para o desenvolvimento humano e a construção de uma sociedade mais justa e igualitária. Por
               isso, o ICECO atua como um agente de transformação, promovendo inclusão e oportunidades para indivíduos de
