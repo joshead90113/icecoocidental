@@ -1,4 +1,4 @@
-// 'adicione essa imagem como foto de perfil no Gabriel Saraiva' (on element 'body' at '/src/routes/index.tsx:1')
+// 'atualiza a foto de perfil de gabriel saraiva para essa foto' (on element 'body' at '/src/routes/index.tsx:1')
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
