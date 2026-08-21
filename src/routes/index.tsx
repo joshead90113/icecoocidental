@@ -92,7 +92,7 @@ function Index() {
                 Uma década transformando vidas por meio da cultura, do esporte, da educação e da cidadania.
               </p>
 
-              <div className="space-y-5 text-muted-foreground leading-relaxed max-w-3xl">
+              <div className="space-y-5 text-muted-foreground leading-relaxed max-w-3xl text-justify">
                 <p>
                   Fundado em 22 de abril de 2016, o Instituto Cultural e Esportivo de Cidade Ocidental — I.C.E.C.O. — nasceu com a missão de promover ações de relevância social, cultural, educacional e esportiva, oferecendo oportunidades e fortalecendo a participação da comunidade.
                 </p>
