@@ -386,7 +386,7 @@ function CulturaPage() {
               <li key={item.year} className="relative">
                 <span className="absolute -left-[33px] top-1 flex h-5 w-5 items-center justify-center rounded-full bg-secondary ring-4 ring-background" />
                 <div className="text-xl font-black text-primary">{item.year}</div>
-                <p className="text-muted-foreground leading-relaxed mt-1">{item.text}</p>
+                <p className="text-muted-foreground leading-relaxed mt-1 text-justify">{item.text}</p>
               </li>
             ))}
           </ol>
