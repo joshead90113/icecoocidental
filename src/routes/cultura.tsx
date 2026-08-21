@@ -354,7 +354,7 @@ function CulturaPage() {
               <h2 className="text-2xl md:text-3xl font-black text-primary">{section.title}</h2>
               <div className="h-1 w-16 bg-secondary rounded-full" />
               {section.paragraphs.map((p) => (
-                <p key={p.slice(0, 40)} className="text-base md:text-lg leading-relaxed text-muted-foreground">
+                <p key={p.slice(0, 40)} className="text-base md:text-lg leading-relaxed text-muted-foreground text-justify">
                   {p}
                 </p>
               ))}
