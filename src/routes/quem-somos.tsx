@@ -64,7 +64,7 @@ function QuemSomosPage() {
                 Quem <span className="text-primary italic">Somos</span>
               </h1>
               <div className="h-1.5 w-24 bg-secondary rounded-full" />
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground text-justify leading-relaxed">
                 O <strong className="text-foreground">Instituto Cultural e Esportivo de Cidade Ocidental – ICECO</strong>,
                 fundado em 22 de abril de 2016 e registrado sob o CNPJ 26.141.602/0001-52, é uma organização da
                 sociedade civil de direito privado, de caráter filantrópico e sem fins lucrativos. Com sede em Cidade
@@ -89,7 +89,7 @@ function QuemSomosPage() {
           {/* Essência */}
           <section className="rounded-3xl bg-muted/50 border border-border/50 p-8 md:p-12 space-y-4">
             <h2 className="text-2xl md:text-3xl font-black text-primary">Nossa Essência e Propósito</h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-justify leading-relaxed">
               Nascemos da convicção de que a cultura, o esporte, a educação e a assistência social são pilares
               fundamentais para o desenvolvimento humano e a construção de uma sociedade mais justa e igualitária. Por
               isso, o ICECO atua como um agente de transformação, promovendo inclusão e oportunidades para indivíduos de
@@ -125,7 +125,7 @@ function QuemSomosPage() {
           {/* Transparência */}
           <section className="rounded-3xl bg-primary text-primary-foreground p-8 md:p-12 space-y-4">
             <h2 className="text-2xl md:text-3xl font-black">Transparência e Independência</h2>
-            <p className="opacity-90 leading-relaxed">
+            <p className="opacity-90 text-justify leading-relaxed">
               Operamos sob os princípios da legalidade, impessoalidade, moralidade, publicidade, economicidade e
               eficiência. Nossas rendas e recursos são integralmente reinvestidos na manutenção e desenvolvimento de
               nossos programas, sem qualquer distribuição de excedentes operacionais. O ICECO mantém sua total

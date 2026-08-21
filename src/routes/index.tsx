@@ -1,3 +1,4 @@
+// 'mude o formato de texto do site para justificar do word' (on element 'body' at '/src/routes/index.tsx:1')
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
@@ -59,7 +60,7 @@ function Index() {
               Cultura e esporte <br/>
               <span className="text-secondary">transformando</span> vidas
             </h1>
-            <p className="text-lg md:text-2xl font-medium max-w-2xl opacity-90 leading-relaxed">
+            <p className="text-lg md:text-2xl font-medium max-w-2xl opacity-90 text-justify leading-relaxed">
               O I.C.E.C.O. promove cultura, esporte, arte e inclusão social conectando talentos e oportunidades na região do Entorno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -88,7 +89,7 @@ function Index() {
               <h2 className="text-4xl md:text-5xl font-black text-foreground leading-tight">
                 10 anos de <span className="text-primary italic">I.C.E.C.O.</span>
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl font-medium">
+              <p className="text-lg md:text-xl text-muted-foreground text-justify leading-relaxed max-w-3xl font-medium">
                 Uma década transformando vidas por meio da cultura, do esporte, da educação e da cidadania.
               </p>
 
