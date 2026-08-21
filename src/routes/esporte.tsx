@@ -39,7 +39,7 @@ function EsportePage() {
 
           <div className="grid gap-8 md:gap-12">
             <section className="prose prose-slate dark:prose-invert max-w-none">
-              <p className="text-xl leading-relaxed font-medium">
+              <p className="text-xl leading-relaxed text-justify font-medium">
                 O Ginásio de Esportes Lindolfo Lima Neto, conhecido popularmente como <strong>Ginásio Lindolfo Lima</strong>, é a principal e mais tradicional instalação esportiva coberta de Cidade Ocidental, Goiás. Fica na SQ 13, Área Especial — Centro, e também serve como sede da Secretaria Municipal de Esporte, Lazer e Juventude.
               </p>
             </section>
@@ -95,7 +95,7 @@ function EsportePage() {
             </div>
 
             <footer className="text-center py-8 bg-secondary/5 rounded-3xl border border-secondary/10">
-              <p className="text-lg font-bold text-secondary">
+              <p className="text-lg font-bold text-justify text-secondary">
                 Em resumo: um espaço público revitalizado, essencial para a prática esportiva e a vida comunitária de Cidade Ocidental.
               </p>
             </footer>
