@@ -1,4 +1,4 @@
-// 'atualiza a foto de perfil de gabriel saraiva para essa foto' (on element 'body' at '/src/routes/index.tsx:1')
+// 'retire a aba do ginasio lindolfo lima neto' (on element 'body' at '/src/routes/index.tsx:1')
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
