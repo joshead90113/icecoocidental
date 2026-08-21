@@ -133,6 +133,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
 
   const isRodrigo = member.name.toLowerCase().includes("rodrigo");
   const isMateus = member.name.toLowerCase().includes("mateus") || member.name.toLowerCase().includes("matheus");
+  const isLucinaldo = member.name.toLowerCase().includes("lucinaldo");
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
