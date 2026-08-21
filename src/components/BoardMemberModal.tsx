@@ -196,7 +196,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 Perfil Profissional
               </div>
               <DialogTitle className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
-                {isRodrigo || isMateus ? "Apresentação Profissional" : member.name}
+                {isRodrigo || isMateus || isLucinaldo ? "Apresentação Profissional" : member.name}
               </DialogTitle>
               {isRodrigo ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
@@ -205,6 +205,10 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
               ) : isMateus ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
                   MATHEUS WELLINGTON — Músico Percussionista
+                </DialogDescription>
+              ) : isLucinaldo ? (
+                <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
+                  Lucinaldo José Rodriguês de Carvalho
                 </DialogDescription>
               ) : (
                 <DialogDescription className="text-base text-muted-foreground mt-1">
@@ -263,6 +267,25 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 <section>
                   <SectionTitle icon={Trophy}>Principais Títulos e Conquistas</SectionTitle>
                   <BulletList items={mateusCurriculum.achievements} />
+                </section>
+              </div>
+            ) : isLucinaldo ? (
+              <div className="space-y-8">
+                <p className="text-lg font-bold text-foreground leading-relaxed border-l-4 border-accent pl-4">
+                  {lucinaldoCurriculum.headline}
+                </p>
+                <div className="text-muted-foreground text-justify leading-relaxed space-y-4">
+                  <p>{lucinaldoCurriculum.summary}</p>
+                  {lucinaldoCurriculum.content.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+
+                <div className="h-px bg-border" />
+
+                <section>
+                  <SectionTitle icon={Briefcase}>Áreas de Atuação</SectionTitle>
+                  <BulletList items={lucinaldoCurriculum.areas} />
                 </section>
               </div>
             ) : (
