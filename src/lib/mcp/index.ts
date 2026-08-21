@@ -1,4 +1,4 @@
-import { auth, defineMcp, type AnyToolDefinition } from "@lovable.dev/mcp-js";
+import { auth, defineMcp } from "@lovable.dev/mcp-js";
 import listBoardMembers from "./tools/list-board-members";
 import listCategories from "./tools/list-categories";
 import listNews from "./tools/list-news";
@@ -19,5 +19,5 @@ export default defineMcp({
     acceptedAudiences: "authenticated",
   }),
   // Cast necessário: `outputSchema` é opcional e o projeto usa exactOptionalPropertyTypes.
-  tools: [listBoardMembers, listCategories, listProjects, listNews, listRaffles] as unknown as AnyToolDefinition[],
+  tools: [listBoardMembers, listCategories, listProjects, listNews, listRaffles] as unknown as Parameters<typeof defineMcp>[0]["tools"],
 });
