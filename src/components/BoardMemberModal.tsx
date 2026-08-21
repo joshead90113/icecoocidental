@@ -70,6 +70,32 @@ const mateusCurriculum = {
   ],
 };
 
+const lucinaldoCurriculum = {
+  headline: "Professor, educador, consultor e gestor de projetos",
+  summary:
+    "Lucinaldo José Rodriguês de Carvalho é professor licenciado em Química, com formação na área de Ciências da Natureza e suas Tecnologias e pós-graduação em Docência do Ensino Superior. Ao longo de sua trajetória profissional, consolidou uma ampla experiência nas áreas de educação, gestão, consultoria, meio ambiente, marketing e desenvolvimento de projetos.",
+  content: [
+    "Sua atuação como educador inclui experiência como professor de Química, Física e Matemática, especialmente no Ensino Médio e em cursos preparatórios para vestibulares. Sua formação e experiência em educação refletem o compromisso com a disseminação do conhecimento, a formação de estudantes e o desenvolvimento de práticas pedagógicas voltadas à aprendizagem e à transformação social.",
+    "Além da experiência em sala de aula, Lucinaldo possui atuação na implantação, acompanhamento, execução e avaliação de programas e projetos, bem como na organização e produção de eventos. Essa experiência multidisciplinar permite sua participação em diferentes etapas de planejamento e desenvolvimento de iniciativas educacionais, ambientais e institucionais.",
+    "Na área de gestão e consultoria, também acumulou experiência como assessor e consultor de marketing, gerente comercial e consultor de vendas empresariais, desenvolvendo competências relacionadas à comunicação, relacionamento profissional, estratégias comerciais e gestão de equipes.",
+    "Sua trajetória também possui forte relação com a educação e a temática ambiental. Atuou como coordenador da III Conferência Distrital do Meio Ambiente, em parceria com órgãos como o Ministério do Meio Ambiente (MMA) e o Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA), além de exercer a função de diretor educador ambiental em organização não governamental ambientalista.",
+    "Com uma trajetória marcada pela integração entre educação, gestão, meio ambiente, comunicação e desenvolvimento de projetos, Lucinaldo reúne experiência técnica e capacidade de articulação para atuar em iniciativas que valorizam o conhecimento, a responsabilidade socioambiental e o desenvolvimento de pessoas e comunidades.",
+    "Sua experiência profissional é complementada por características como boa comunicação, fácilidade de aprendizagem, criatividade, capacidade de trabalho em equipe e disposição para novos desafios, buscando continuamente o crescimento profissional e pessoal.",
+  ],
+  areas: [
+    "Educação e docência;",
+    "Química, Física e Matemática;",
+    "Ensino Médio e preparação para vestibulares;",
+    "Docência do Ensino Superior;",
+    "Gestão e desenvolvimento de projetos;",
+    "Consultoria e marketing;",
+    "Gestão comercial e vendas empresariais;",
+    "Educação ambiental;",
+    "Organização e produção de eventos;",
+    "Programas e projetos socioambientais.",
+  ],
+};
+
 function SectionTitle({
   icon: Icon,
   children,
@@ -107,6 +133,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
 
   const isRodrigo = member.name.toLowerCase().includes("rodrigo");
   const isMateus = member.name.toLowerCase().includes("mateus") || member.name.toLowerCase().includes("matheus");
+  const isLucinaldo = member.name.toLowerCase().includes("lucinaldo");
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -169,7 +196,7 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 Perfil Profissional
               </div>
               <DialogTitle className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
-                {isRodrigo || isMateus ? "Apresentação Profissional" : member.name}
+                {isRodrigo || isMateus || isLucinaldo ? "Apresentação Profissional" : member.name}
               </DialogTitle>
               {isRodrigo ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
@@ -178,6 +205,10 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
               ) : isMateus ? (
                 <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
                   MATHEUS WELLINGTON — Músico Percussionista
+                </DialogDescription>
+              ) : isLucinaldo ? (
+                <DialogDescription className="text-base sm:text-lg text-primary font-bold mt-1">
+                  Lucinaldo José Rodriguês de Carvalho
                 </DialogDescription>
               ) : (
                 <DialogDescription className="text-base text-muted-foreground mt-1">
@@ -236,6 +267,25 @@ export function BoardMemberModal({ member, open, onOpenChange }: BoardMemberModa
                 <section>
                   <SectionTitle icon={Trophy}>Principais Títulos e Conquistas</SectionTitle>
                   <BulletList items={mateusCurriculum.achievements} />
+                </section>
+              </div>
+            ) : isLucinaldo ? (
+              <div className="space-y-8">
+                <p className="text-lg font-bold text-foreground leading-relaxed border-l-4 border-accent pl-4">
+                  {lucinaldoCurriculum.headline}
+                </p>
+                <div className="text-muted-foreground text-justify leading-relaxed space-y-4">
+                  <p>{lucinaldoCurriculum.summary}</p>
+                  {lucinaldoCurriculum.content.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+
+                <div className="h-px bg-border" />
+
+                <section>
+                  <SectionTitle icon={Briefcase}>Áreas de Atuação</SectionTitle>
+                  <BulletList items={lucinaldoCurriculum.areas} />
                 </section>
               </div>
             ) : (
