@@ -1,4 +1,4 @@
-// 'no botão de explorar esporte, retire a aba inteira do ginasio lindolfo lima neto, e coloque abas de volei de quadra, volei de areia, handebol e futsal com aba de inscrições para esses esportes' (on element 'body' at '/src/routes/index.tsx:1')
+// 'atualiza a foto de perfil de gabriel saraiva para essa foto' (on element 'body' at '/src/routes/index.tsx:1')
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
@@ -199,25 +199,19 @@ function Index() {
                   <span className="bg-secondary/10 text-secondary text-xs font-black px-3 py-1 rounded-full uppercase">8 Modalidades</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Vôlei de Quadra, Vôlei de Areia, Handebol e Futsal. Disciplina e saúde através do movimento e da competição saudável.
+                  Vôlei, Handebol, Futsal, Futebol e Basquete. Disciplina e saúde através do movimento e da competição saudável.
                 </p>
                 <div className="flex flex-wrap gap-2 py-2">
-                  {['Vôlei de Quadra', 'Vôlei de Areia', 'Handebol', 'Futsal'].map(t => (
-                    <JoinUsModal 
-                      key={t}
-                      trigger={
-                        <button className="text-xs font-bold bg-muted px-2 py-1 rounded hover:bg-secondary hover:text-secondary-foreground transition-colors">
-                          {t} (Inscrever-se)
-                        </button>
-                      } 
-                    />
+                  {['Vôlei', 'Futsal', 'Futebol', 'Basquete'].map(t => (
+                    <span key={t} className="text-xs font-bold bg-muted px-2 py-1 rounded">{t}</span>
                   ))}
                 </div>
-                <JoinUsModal trigger={
-                  <button className="w-full py-4 rounded-xl bg-secondary text-secondary-foreground font-black hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20 block text-center">
-                    Inscrever-se no Esporte
-                  </button>
-                } />
+                <Link 
+                  to="/esporte"
+                  className="w-full py-4 rounded-xl bg-secondary text-secondary-foreground font-bold hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20 block text-center"
+                >
+                  Explorar Esporte
+                </Link>
               </div>
             </div>
           </div>

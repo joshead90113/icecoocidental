@@ -31,13 +31,14 @@ const Navbar = () => {
     },
     {
       label: "Esporte",
+      to: "/esporte",
       children: [
-        { label: "Vôlei de Quadra", to: "/" as any },
-        { label: "Vôlei de Areia", to: "/" as any },
+        { label: "Vôlei", to: "/" as any },
         { label: "Handebol", to: "/" as any },
         { label: "Futsal", to: "/" as any },
         { label: "Futebol de 7", to: "/" as any },
         { label: "Futebol de Campo", to: "/" as any },
+        { label: "Vôlei de Praia", to: "/" as any },
         { label: "Basquetebol", to: "/" as any },
         { label: "Filiados", to: "/" as any },
       ],
