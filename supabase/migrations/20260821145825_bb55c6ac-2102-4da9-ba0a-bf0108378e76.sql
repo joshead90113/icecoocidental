@@ -1,0 +1,1 @@
+UPDATE public.board_members SET photo_url = '/__l5e/assets-v1/3a4a68bb-d906-4359-88c7-547261ab1f38/gabriel-saraiva.png' WHERE id = '3ec1f0ac-237d-4ab7-89f1-0fc7f8187940';
