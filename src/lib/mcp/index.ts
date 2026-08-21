@@ -18,5 +18,6 @@ export default defineMcp({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",
   }),
-  tools: [listBoardMembers, listCategories, listProjects, listNews, listRaffles],
+  // Cast necessário: `outputSchema` é opcional e o projeto usa exactOptionalPropertyTypes.
+  tools: [listBoardMembers, listCategories, listProjects, listNews, listRaffles] as unknown as AnyToolDefinition[],
 });
