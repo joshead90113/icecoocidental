@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CulturaRouteImport } from './routes/cultura'
 import { Route as DiretoriaRouteImport } from './routes/diretoria'
-import { Route as EsporteRouteImport } from './routes/esporte'
 import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as GaleriaRouteImport } from './routes/galeria'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
@@ -30,11 +29,6 @@ const CulturaRoute = CulturaRouteImport.update({
 const DiretoriaRoute = DiretoriaRouteImport.update({
   id: '/diretoria',
   path: '/diretoria',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsporteRoute = EsporteRouteImport.update({
-  id: '/esporte',
-  path: '/esporte',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventosRoute = EventosRouteImport.update({
@@ -57,7 +51,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cultura': typeof CulturaRoute
   '/diretoria': typeof DiretoriaRoute
-  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
   '/quem-somos': typeof QuemSomosRoute
@@ -66,7 +59,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cultura': typeof CulturaRoute
   '/diretoria': typeof DiretoriaRoute
-  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
   '/quem-somos': typeof QuemSomosRoute
@@ -76,7 +68,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cultura': typeof CulturaRoute
   '/diretoria': typeof DiretoriaRoute
-  '/esporte': typeof EsporteRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
   '/quem-somos': typeof QuemSomosRoute
@@ -84,28 +75,14 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
-    | '/cultura'
-    | '/diretoria'
-    | '/esporte'
-    | '/eventos'
-    | '/galeria'
-    | '/quem-somos'
+    '/' | '/cultura' | '/diretoria' | '/eventos' | '/galeria' | '/quem-somos'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/cultura'
-    | '/diretoria'
-    | '/esporte'
-    | '/eventos'
-    | '/galeria'
-    | '/quem-somos'
+  to: '/' | '/cultura' | '/diretoria' | '/eventos' | '/galeria' | '/quem-somos'
   id:
     | '__root__'
     | '/'
     | '/cultura'
     | '/diretoria'
-    | '/esporte'
     | '/eventos'
     | '/galeria'
     | '/quem-somos'
@@ -115,7 +92,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CulturaRoute: typeof CulturaRoute
   DiretoriaRoute: typeof DiretoriaRoute
-  EsporteRoute: typeof EsporteRoute
   EventosRoute: typeof EventosRoute
   GaleriaRoute: typeof GaleriaRoute
   QuemSomosRoute: typeof QuemSomosRoute
@@ -142,13 +118,6 @@ declare module '@tanstack/react-router' {
       path: '/diretoria'
       fullPath: '/diretoria'
       preLoaderRoute: typeof DiretoriaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esporte': {
-      id: '/esporte'
-      path: '/esporte'
-      fullPath: '/esporte'
-      preLoaderRoute: typeof EsporteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/eventos': {
@@ -179,7 +148,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CulturaRoute: CulturaRoute,
   DiretoriaRoute: DiretoriaRoute,
-  EsporteRoute: EsporteRoute,
   EventosRoute: EventosRoute,
   GaleriaRoute: GaleriaRoute,
   QuemSomosRoute: QuemSomosRoute,
