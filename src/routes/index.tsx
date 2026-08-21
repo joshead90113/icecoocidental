@@ -1,4 +1,4 @@
-// 'mude o formato de texto do site para justificar do word' (on element 'body' at '/src/routes/index.tsx:1')
+// 'remove o fundo da foto de perfil de Andreia Alves' (on element 'body' at '/src/routes/index.tsx:1')
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
