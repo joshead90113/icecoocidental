@@ -1,0 +1,1 @@
+UPDATE public.board_members SET photo_url = '/__l5e/assets-v1/070071bd-00f6-4e5f-80a5-210c4e645bde/andreia-alves-v5.jpg' WHERE name = 'Andreia Alves';
